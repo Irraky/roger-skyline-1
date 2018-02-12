@@ -1,0 +1,5 @@
+md5=`md5sum -c /etc/crontab.md5 | cut -d: -f2 | cut -d' ' -f2`;
+if [ $md5 != "Réussi" ]; then
+	echo "File has changed" | mail -s "/etc/crontab" root;
+	md5sum /etc/crontab > /etc/crontab.md5;
+fi

@@ -1,0 +1,1 @@
+Le fichier qui contient les cles RSA autorisees a se connecter via SSH est /etc/ssh/ssh_host_rsa_key
